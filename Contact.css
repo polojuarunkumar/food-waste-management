@@ -61,6 +61,9 @@ main h1{
     color: black;
     text-align: center;
 }
+#message{
+    margin-left: 30%;
+}
 .details input{
     margin: 0 0 10px 30%;
     padding: 12px;
