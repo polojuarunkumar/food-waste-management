@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+header{
+    height: 80px;
+    padding: 0px 5px;
+    align-items: center;
+    display: flex;
+    width: auto;
+}
+nav{
+    display: flex;
+    justify-content: space-evenly;
+}
+.logo{
+    width: 600px;
+    height: auto;
+    margin-right: auto;
+}
+.logo h1{
+    font-size: 40px;
+    color: #06c167;
+}
+.nav button{
+    border-radius: 10px;
+    height: 50px;
+    width: 120px;
+    background-color: #06c167;
+    border: none;
+    margin: 0 20px;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+.nav li{
+    list-style-type: none;
+    justify-content: space-between;
+}
+.nav a{
+    text-decoration: none;
+    color: white;
+}
+
+/* main */
+main h1{
+    color: black;
+    text-align: center;
+    height: 42px;
+    font-size: 28px;
+    margin: 20px;
+}
+.details label{
+    height: 25px;
+    width: 566px;
+    font-size: 16px;
+    margin: 0 0 10px 30%;
+    color: black;
+    text-align: center;
+}
+.details input{
+    margin: 0 0 10px 30%;
+    padding: 12px;
+    height: 20px;
+    width: 566px;
+    border-radius: 8px;
+}
+.details button{
+    background-color: #06c167;
+    padding: 12px 20px;
+    height: 44px;
+    width: 74px;
+    border-radius: 10px;
+    margin:  0 0 10px 30%; 
+}
+.contact_info p{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    height: 25px;
+}
+main h4{
+    font-size: 23px;
+    text-align: center;
+    padding: 10px;
+    height: 54px;
+}
+.faqs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 20px 10%;
+}
+.faqs button{
+    color: #444444;
+    background-color: #ffffffda;
+    padding: 18px;
+    height: 60px;
+}
+.faqs a{
+    text-decoration: none;
+    font-size: 15px;
+    color: #444444;
+}
