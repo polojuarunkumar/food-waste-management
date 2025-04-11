@@ -71,3 +71,59 @@ document.addEventListener('DOMContentLoaded', function () {
         editProfile();
     });
 });
+
+// profile.js
+
+document.addEventListener("DOMContentLoaded", () => {
+    const donationForm = document.getElementById("donationForm");
+    const donationTableBody = document.getElementById("donationTableBody");
+  
+    // Load donations from local storage
+    function loadDonations() {
+      const donations = JSON.parse(localStorage.getItem("donations")) || [];
+      donationTableBody.innerHTML = ""; // Clear table
+      donations.forEach(donation => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td>${donation.food}</td>
+          <td>${donation.quantity}</td>
+          <td>${donation.datetime}</td>
+          <td>${donation.status}</td>
+        `;
+        donationTableBody.appendChild(row);
+      });
+    }
+  
+    // Save new donation
+    donationForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+  
+      const food = document.getElementById("food").value;
+      const quantity = document.getElementById("quantity").value;
+      const now = new Date().toLocaleString();
+  
+      const newDonation = {
+        food,
+        quantity,
+        datetime: now,
+        status: "Pending"
+      };
+  
+      const donations = JSON.parse(localStorage.getItem("donations")) || [];
+      donations.push(newDonation);
+      localStorage.setItem("donations", JSON.stringify(donations));
+  
+      donationForm.reset();
+      loadDonations();
+    });
+  
+    loadDonations();
+  });
+
+  // Clear donation history on button click
+document.getElementById("clearHistoryBtn").addEventListener("click", () => {
+    if (confirm("Are you sure you want to clear all donation history?")) {
+      document.getElementById("donationTableBody").innerHTML = "";
+    }
+  });
+  
